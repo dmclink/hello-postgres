@@ -1,0 +1,7 @@
+# change to true if this app connects to db, will create database of db_name (defaults to app_name) automatically
+needs_db: true
+
+# uncomment these and overwrite the group_vars/all.yml settings for app specifics as necessary
+# db_host:
+# db_port:
+# db_name:

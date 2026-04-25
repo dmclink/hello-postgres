@@ -1,0 +1,4 @@
+# vault app passwords are generated automatically from your seed in the roots vault.yml
+# if for some reason you want to change the default behavior and set the postgres password for your app manually
+# uncomment this and edit it
+# vault_app_password: "super-secret-app-password"
