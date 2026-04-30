@@ -1,6 +1,12 @@
-# change to true if this app connects to db, will create database of db_name (defaults to app_name) automatically
-needs_db: true
+# STATE
+# when set to false, results in app being removed from k3s cluster
+enabled: true
 
+# CONFIG
+# change to true if this app connects to db, will create database of db_name (defaults to app_name) automatically
+needs_db: false
+
+# VARS
 # uncomment these and overwrite the group_vars/all.yml settings for app specifics as necessary
 # db_host:
 # db_port:

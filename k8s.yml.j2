@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: {{ app_name }}
   namespace: {{ app_name }}
+  labels:
+    app: {{ app_name }}
+    managed-by: "ansible-homelab"
 spec:
   replicas: 1
   selector:
@@ -12,6 +15,7 @@ spec:
     metadata:
       labels:
         app: {{ app_name }}
+        managed-by: "ansible-homelab"
     spec:
       containers:
       - name: main
