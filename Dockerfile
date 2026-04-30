@@ -22,13 +22,11 @@ ARG APP_NAME
 
 RUN apt-get update && apt-get install -y \
     libstdc++6 \
-    libpqxx-7.10 \
+    libpqxx-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-COPY --from=builder /install/bin/${APP_NAME} /usr/local/bin/${APP_NAME}
-RUN chmod +x /usr/local/bin/${APP_NAME}
+COPY --from=builder --chmod=755 /install/bin/${APP_NAME} /usr/local/bin/app
 
-ENV EXE_NAME=${APP_NAME}
-ENTRYPOINT /usr/local/bin/${EXE_NAME}
+ENTRYPOINT ["/usr/local/bin/app"]
