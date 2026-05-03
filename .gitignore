@@ -76,3 +76,4 @@ Testing/
 
 secret_vars.yml
 vault.yml
+values.local.yaml

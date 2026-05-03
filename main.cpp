@@ -5,8 +5,8 @@
 #include <cstdlib>
 
 int main() {
-    std::cout << "DATABASE_URL: " << std::getenv("DATABASE_URL") << std::endl;
-    std::cout << "DATABASE_USER: " << std::getenv("DATABASE_USER") << std::endl;
+    // std::cout << "DATABASE_URL: " << std::getenv("DATABASE_URL") << std::endl;
+    // std::cout << "DATABASE_USER: " << std::getenv("DATABASE_USER") << std::endl;
     try {
         const char* db_url_env = std::getenv("DATABASE_URL");
         if (!db_url_env) {
